@@ -1,0 +1,146 @@
+/* Estilos generales */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #b4b7b9;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding-top: 20px;
+    font-size: 16px; /* Tamaño base de fuente */
+}
+
+h1 {
+    font-size: 2.2em; /* Un poco más pequeño que antes */
+    color: #000000;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.cart {
+    background-color: #828283;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+h2 {
+    font-size: 1.8em;
+    color: #000000;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* Estilo de los productos en el carrito */
+.cart-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px; /* Reducido para compactar */
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+}
+.cart-item .details {
+    flex-grow: 1;
+    margin-right: 15px;
+}
+
+.cart-item .details h3 {
+    font-size: 1.1em; /* Títulos más pequeños */
+    color: #000000;
+    margin: 0;
+    font-weight: 600;
+}
+
+.cart-item .details p {
+    font-size: 0.9em; /* Un tamaño consistente para la descripción */
+    color: #000000;
+    margin: 5px 0;
+}
+
+.cart-item .price {
+    font-size: 1.1em;
+    color: #00ff6ac7;
+    font-weight: bold;
+    margin-right: 40px;
+    white-space: nowrap;
+}
+
+/* Botones de eliminación dentro del carrito */
+.cart-item button {
+    background-color: #e74c3c; /* Color de fondo */
+    color: white;
+    border: none;
+    padding: 8px; /* Relleno más pequeño para botones más compactos */
+    font-size: 1em; /* Tamaño de fuente uniforme */
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%; /* Ancho completo */
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin: 80px;
+
+}
+
+.cart-item button:hover {
+    background-color: #c0392b;
+    transform: scale(1.05);
+}
+
+/* Total del carrito */
+#total {
+    font-size: 1.2em; /* Un tamaño de texto consistente */
+    font-weight: bold;
+    color: #00ff6ac7;
+    text-align: right;
+    margin-top: 15px;
+    margin-right: 50px;
+    text-align: center;
+}
+
+/* Botones de acción (vaciar carrito, realizar compra) */
+button {
+    background-color: #000000;
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px; /* Un padding uniforme */
+    font-size: 1em; /* Tamaño de fuente uniforme */
+    color: #fff;
+    background-color: #000000;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: 100%; /* Ancho completo para todos los botones */
+;
+}
+
+button:hover {
+    background-color: #ff0000d2;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Enlace de retorno al catálogo */
+a {
+    display: block;
+    text-align: center;
+    margin-top: 30px;
+    font-size: 1.2em;
+    color: #000000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    color: #fafafa;
+}
+

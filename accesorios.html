@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Accesorios</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="funciones.js"></script>
+    <link rel="icon" href="imagenes/Designer.jpeg" type="image/jpeg">
+    <style>
+      /* Estilo global */
+      body {
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          background-color: #b4b7b9;
+          margin: 0;
+          padding: 0;
+      }
+
+      /* Estilo del encabezado */
+      h1 {
+          background-color: #bbafaf;
+          color: #000000;
+          text-align: center;
+          padding: 20px;
+          text-transform: uppercase;
+          font-size: 3rem;
+          letter-spacing: 2px;
+          border: 1px solid #ffffff;
+          border-radius: 10px;
+          box-shadow: 0 4px 15px rgba(113, 116, 119, 0.6);
+          text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+          margin: 20px 0;
+      }
+
+      h1:hover {
+          background-color: #bbafaf;
+          color: #ffffff;
+          cursor: pointer;
+          box-shadow: 0 4px 20px rgba(204, 20, 7, 0.6);
+      }
+
+      /* Estilo de la sección de productos */
+      .product-container {
+          display: flex;
+          justify-content: space-around;
+          flex-wrap: wrap;
+          gap: 30px;
+          padding: 20px;
+          margin: 0 auto;
+          max-width: 1200px;
+      }
+
+      .product {
+          background-color: #828283;
+          border-radius: 10px;
+          overflow: hidden;
+          box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+          text-align: center;
+          transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+          width: 300px;
+          padding: 20px;
+          margin: 10px;
+      }
+
+      .product:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      .product img {
+          width: 100%;
+          height: auto;
+          border-radius: 8px;
+          object-fit: cover;
+          transition: transform 0.3s ease;
+      }
+
+      .product img:hover {
+          transform: scale(1.05);
+      }
+
+      .product h3 {
+          font-size: 1.25rem;
+          color: #333;
+          margin: 15px 0;
+          font-weight: 600;
+      }
+
+      .product .price {
+          font-size: 1.2rem;
+          color: #000000;
+          margin-bottom: 20px;
+          font-weight: bold;
+      }
+
+      .product button {
+          padding: 10px 20px;
+          background-color: #000000;
+          border: none;
+          color: white;
+          font-size: 1rem;
+          cursor: pointer;
+          border-radius: 5px;
+          transition: background-color 0.3s ease, transform 0.3s ease;
+      }
+
+      .product button:hover {
+          background-color: #c00707b9;
+          transform: scale(1.05);
+      }
+
+      /* Responsividad */
+      @media (max-width: 768px) {
+          .product-container {
+              flex-direction: column;
+              align-items: center;
+          }
+
+          .product {
+              width: 80%;
+          }
+      }
+      .responsive-img {
+            width: 100%; /* La imagen ocupa el 100% del ancho de la pantalla */
+            height: auto; /* Mantiene la relación de aspecto */
+            max-height: 80vh; /* Limita la altura máxima de la imagen al 80% de la altura de la ventana */
+            object-fit: cover; /* Cubre toda el área de la imagen sin distorsionarla */
+            border-radius: 15px; /* Bordes redondeados */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+            transition: transform 0.5s ease, box-shadow 0.5s ease; /* Transiciones suaves */
+        }
+
+        /* Efecto de zoom en la imagen */
+        .responsive-img:hover {
+            transform: scale(1.05); /* Efecto de zoom */
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* Sombra más intensa */
+        }
+
+        /* Contenido sobre la imagen */
+        .content {
+            position: absolute;
+            top: 50%; /* Centra el contenido verticalmente */
+            left: 50%; /* Centra el contenido horizontalmente */
+            transform: translate(-50%, -50%);
+            color: white;
+            text-align: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Sombra de texto para mejor legibilidad */
+        }
+
+        h1 {
+            font-size: 3rem;
+            letter-spacing: 2px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+
+        p {
+            font-size: 1.2rem;
+            margin-top: 10px;
+            font-weight: 500;
+        }
+
+        /* Responsividad */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem; /* Reducir tamaño del texto en pantallas pequeñas */
+            }
+
+            p {
+                font-size: 1rem; /* Ajustar tamaño del párrafo */
+            }
+        }
+      
+
+  </style>
+  </head>
+  <body>
+    <h1>ACCESORIOS</h1>
+
+    <img src="imagenes/bannerACCESORIOS.png" alt="Imagen Principal" class="responsive-img">
+
+      <!--PRODUCTOS: -->
+    <div class="product-container">
+
+        <!-- Tarjeta 1 -->
+        <div class="product">
+          <a href="https://www.nike.cl/dv0761-017-nike-academy-team/p" target="_blank">
+              <img src="imagenes/mochilaNIKE.png" alt="Mochila NIKE">
+          </a>
+          <h3>Backpack</h3>
+          <p class="price">$57.990</p>
+          <button onclick="addToCart('Backpack Nike', 57.990)">Agregar al Carrito</button>
+        </div>
+
+        <!-- Tarjeta 2 -->
+        <div class="product">
+          <a href="https://cl.puma.com/botella-de-agua-para-training-sportstyle-053518-01.html" target="_blank">
+              <img src="imagenes/botellaPUMA.png" alt="Botella de agua PUMA">
+          </a>
+          <h3>Botella de agua para training Sportstyle</h3>
+          <p class="price">$12.990</p>
+          <button onclick="addToCart('Botella de agua para training Sportstyle', 12.990 )">Agregar al Carrito</button>
+        </div>
+
+        <!-- Tarjeta 3 -->
+        <div class="product">
+          <a href="https://www.adidas.cl/red-porta-pelotas-tiro-league/HS9751.html" target="_blank">
+              <img src="imagenes/redportapelotasADIDAS.png" alt="Red porta pelotas">
+          </a>
+          <h3>Red Porta Pelotas Tiro League</h3>
+          <p class="price">$39.990</p>
+          <button onclick="addToCart('Red Porta Pelotas Tiro League', 39.990 )">Agregar al Carrito</button>
+        </div>
+
+        <!-- Tarjeta 4 -->
+        <div class="product">
+          <a href="https://cl.puma.com/guantes-de-training-tr-ess-gym-041773-08.html?_sgm_campaign=scn_88524d6cee000&_sgm_source=041773_08&_sgm_action=click" target="_blank">
+              <img src="imagenes/guantePUMA2.png" alt="Guantes de training">
+          </a>
+          <h3>Guantes de training TR ESS GYM</h3>
+          <p class="price">$19.990</p>
+          <button onclick="addToCart('Guantes de training TR ESS GYM', 19.990 )">Agregar al Carrito</button>
+        </div>
+
+        <!-- Tarjeta 5 -->
+        <div class="product">
+          <a href="https://www.adidas.cl/maleta-deportiva-mediana-tiro-league/HS9749.html?pr=product_rr&slot=1&rec=ds" target="_blank">
+              <img src="imagenes/maletaADIDAS.png" alt="Maleta deportiva ADIDAS">
+          </a>
+          <h3>Maleta Deportiva Mediana Tiro League</h3>
+          <p class="price">$37.990</p>
+          <button onclick="addToCart('Maleta Deportiva Mediana Tiro League', 37.990)">Agregar al Carrito</button>
+        </div>
+
+        <!-- Tarjeta 6 -->
+        <div class="product">
+            <a href="https://www.nike.cl/fb5623-100-nike-sport-essentials/p" target="_blank">
+                <img src="imagenes/gorroNIKE.png" alt="Gorro NIKE">
+            </a>
+            <h3>Gorro Unisex Dri-Fit</h3>
+            <p class="price">$24.990</p>
+            <button onclick="addToCart('Gorro Unisex Dri-Fit', 24.990)">Agregar al Carrito</button>
+        </div>
+    </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>

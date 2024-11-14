@@ -1,0 +1,617 @@
+body{
+  background-color: #b4b7b9;
+  color: rgb(0, 0, 0);
+}
+h1{
+  background-color:#212529;
+  color: rgb(0, 0, 0);
+  text-align: center;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.navbar {
+    /* Bordes redondeados para una apariencia más suave */
+  background-color: #343a40;  /* Fondo oscuro para la navbar */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil debajo de la navbar */
+}
+.navbar-nav {
+  display: flex;                   /* Usar Flexbox para organizar los enlaces */
+  justify-content: center;         /* Centrar los enlaces horizontalmente */
+  width: 100%;                     /* Asegura que ocupe todo el espacio disponible */
+}
+.website-name {
+  font-size: 1.15rem; /* Tamaño de fuente más grande */
+  font-weight: 700; /* Negrita */
+  letter-spacing: 3px; /* Espaciado entre letras */
+  color: #ffffff; /* Blanco */
+  text-transform: uppercase; /* Todo en mayúsculas */
+  transition: color 0.3s ease; /* Efecto suave al cambiar color */
+  
+
+}
+.website-name:hover {
+  color: #dad5d5; /* Color dorado al pasar el ratón */
+}
+.navbar-brand img {
+  border-radius: 50%;  /* Hace la imagen circular */
+  width: 40px;         /* Ajusta el tamaño de la imagen */
+  height: 40px;        /* Ajusta el tamaño de la imagen */
+  object-fit: cover;   /* Asegura que la imagen se recorte de manera estética */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil para resaltar la imagen */
+  transition: all 0.3s ease; /* Transición suave para los efectos */
+}
+
+/* Efectos al pasar el ratón sobre la imagen */
+.navbar-brand img:hover {
+  transform: scale(1.1);  /* Hace la imagen ligeramente más grande */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Sombra más intensa al hacer hover */
+  border-color: #f8d21d; /* Mantiene el borde dorado al hacer hover */
+}
+.nav-link {
+  font-size: 16px;       /* Tamaño de fuente más grande */
+  font-weight: 500;      /* Font-weight moderado */
+  color: white !important;  /* Asegura que el color sea blanco */
+  text-transform: uppercase; /* Letras en mayúsculas */
+  padding: 10px 15px;    /* Espaciado adicional alrededor de los enlaces */
+  transition: all 0.3s ease; /* Transición suave */
+}
+.nav-link:hover, .nav-link:focus {
+  color: #0eb6e9 !important; /* Color verde en hover */
+  background-color: rgba(255, 255, 255, 0.1); /* Fondo oscuro suave al pasar el ratón */
+  border-radius: 5px;        /* Bordes redondeados en hover */
+}
+.nav-item {
+  margin: 0 15px;            /* Espaciado horizontal entre los enlaces */
+}
+.navbar-collapse {
+  display: flex;
+  justify-content: center;  /* Centra todos los elementos dentro de la navbar */
+  align-items: center;      /* Alinea verticalmente los elementos */
+  width: 100%;
+}
+.nav-item.dropdown .dropdown-menu {
+  border-radius: 8px; /* Bordes redondeados en el menú desplegable */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Sombra sutil para el dropdown */
+}
+.dropdown-item {
+  font-size: 14px;      /* Fuente más pequeña para los elementos del dropdown */
+  padding: 8px 15px;    /* Espaciado adecuado */
+  transition: background-color 0.3s; /* Transición suave para el fondo */
+}
+.dropdown-item:hover, .dropdown-item:focus {
+  background-color: #0eb6e9; /* Fondo verde en hover */
+  color: white; /* Color del texto en el hover */
+}
+/*SECCIÓN DE PRODUCTOS 1:CAMISETAS*/
+
+.product-container {
+    display: flex; /* Utiliza flexbox para alinear horizontalmente */
+    justify-content: space-evenly; /* Espacio igual entre los productos */
+    flex-wrap: wrap; /* Permite que los elementos se ajusten a múltiples líneas */
+}
+/* Estilo general para los productos */
+.product {
+  text-align: center;  /* Centra el texto en cada producto */
+  padding: 20px;  /* Espaciado alrededor del producto */
+  border: none;  /* Borde sutil alrededor de cada producto */
+  border-radius: 8px;  /* Bordes redondeados */
+  margin-bottom: 20px;  /* Espacio entre productos */
+  background-color: #828283;  /* Fondo blanco para los productos */
+  transition: transform 0.3s ease;  /* Transición para el efecto hover */
+}
+.product img {
+  width: 100%;
+  aspect-ratio: 1 / 1; /* Relación de aspecto cuadrada (puedes ajustar el valor si deseas otro formato) */
+  object-fit: cover;  /* Mantiene la imagen dentro del área sin distorsionarla */
+  border-radius: 8px; /* Bordes redondeados */
+}
+.product:hover {
+  transform: scale(1.05);  /* Efecto de zoom al pasar el ratón sobre el producto */
+}
+/* Asegura que todos los títulos (h3) tengan el mismo tamaño */
+.product h3 {
+  font-size: 18px;  /* Tamaño de fuente para los títulos */
+  font-weight: medium;  /* Negrita para los títulos */
+  margin: 10px 0;  /* Espaciado arriba y abajo */
+  color: rgb(0, 0, 0);  /* Color del texto */
+}
+/* Asegura que todas las descripciones (p) tengan el mismo tamaño */
+.product p {
+  font-size: 14px;  /* Tamaño de fuente para las descripciones */
+  color: #0f0e0e;  /* Color gris claro para las descripciones */
+  margin: 5px 0;  /* Espaciado arriba y abajo */
+}
+/* Asegura que los precios tengan el mismo tamaño y estilo */
+.product .price {
+  font-size: 16px;  /* Tamaño de fuente para el precio */
+  font-weight: bold;  /* Negrita para el precio */
+  color: #000000;  /* Color rojo para el precio */
+  margin-top: 10px;  /* Espaciado arriba */
+}
+/* Estilo de las imágenes de los productos */
+.product img {
+  width: 100%;  /* Asegura que las imágenes ocupen todo el ancho disponible */
+  max-width: 250px;  /* Limita el tamaño máximo de las imágenes */
+  height: auto;  /* Mantiene la relación de aspecto */
+  margin-bottom: 15px;  /* Espaciado debajo de la imagen */
+}
+
+/* Estilos para el carrusel */
+.carousel-inner {
+    border-radius: 10px; /* Bordes redondeados para las imágenes */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    overflow: hidden; /* Para asegurarse de que las imágenes no se desborden */
+  }
+  .carousel-item img {
+    object-fit: cover; /* Ajusta las imágenes para cubrir el contenedor sin distorsión */
+    border-radius: 5px; /* Bordes redondeados para las imágenes */
+    height: 400px;
+  }
+  /* Efecto de transición para la imagen */
+  .carousel-item {
+    transition: transform 0.5s ease-in-out;
+  }
+  .carousel-item-next,
+  .carousel-item-prev,
+  .carousel-item.active {
+    transition: transform 0.5s ease-in-out;
+  }
+  /* Personalización de los controles (botones de next/prev) */
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semi-transparente */
+    border-radius: 50%; /* Hace los controles circulares */
+    width: 40px; /* Tamaño de los controles */
+    height: 40px; /* Tamaño de los controles */
+    background-size: 20px; /* Ajusta el tamaño de los íconos */
+  }
+  /* Cambia el color del texto al pasar el mouse sobre los controles */
+  .carousel-control-prev:hover,
+  .carousel-control-next:hover {
+    background-color: rgba(255, 255, 255, 0.7); /* Fondo más oscuro */
+  }
+  .carousel-control-prev-icon:hover,
+  .carousel-control-next-icon:hover {
+    background-color: rgba(255, 255, 255, 0.8); /* Íconos blancos al pasar el mouse */
+  }
+  /* Opcional: Efecto de desvanecimiento para las imágenes del carrusel */
+  .carousel-item-next,
+  .carousel-item-prev,
+  .carousel-item.active {
+    opacity: 0;
+    transition: opacity 1s ease;
+  }
+  .carousel-item-next.carousel-item-left,
+  .carousel-item-prev.carousel-item-right,
+  .carousel-item.active {
+    opacity: 1;
+  }
+/* sección 1
+/* Estilos generales */
+.container {
+  padding: 0 15px; /* Espaciado lateral */
+}
+
+/* Estilos para las imágenes */
+.team-logo {
+  width: 100%;
+  max-width: 300px; /* Tamaño máximo de las imágenes */
+  height: auto;
+  border-radius: 12px; /* Bordes redondeados */
+  transition: transform 0.3s ease-in-out; /* Transición suave */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+/* Efecto hover */
+.team-logo:hover {
+  transform: scale(1.05); /* Aumento de tamaño al pasar el ratón */
+}
+
+/* Espaciado entre las columnas */
+.row {
+  gap: 20px; /* Espacio entre las imágenes */
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+  .col-md-5 {
+    max-width: 90%; /* Mayor tamaño en pantallas pequeñas */
+  }
+}
+
+/*tamaño imágenes dobles*/
+.team-logo {
+  width: 100%;  /* Aumenta el tamaño de las imágenes al 100% del contenedor */
+  max-width: 800px;  /* Opcional: limita el tamaño máximo de las imágenes */
+  height: auto;  /* Mantiene la relación de aspecto original */
+  
+}
+
+@media (max-width: 767px) {
+  .team-logo {
+    width: 90%;  /* Ajusta el tamaño en pantallas más pequeñas */
+  }
+}
+
+/* Estilo de los botones del carrito y login */
+.btn-cart {
+  background: none;
+  display: inline-flex; /* Usamos inline-flex para que el ícono y el texto estén alineados */
+  align-items: center;  /* Centra verticalmente el ícono */
+  background-color: #746d6d; /* Color de fondo similar al botón de login */
+  color: white; /* Texto blanco para un buen contraste */
+  padding: 8px 20px; /* Espaciado cómodo dentro del botón */
+  border: none;
+  border-radius: 30px; /* Bordes redondeados */
+  cursor: pointer; /* Puntero de mano al pasar por encima */
+  font-size: 14px; /* Tamaño de la fuente */
+  font-weight: 600; /* Fuente en negrita */
+  text-transform: uppercase; /* Texto en mayúsculas */
+  letter-spacing: 1px; /* Espaciado entre letras para un efecto limpio */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Sombra sutil para darle profundidad */
+  transition: all 0.3s ease; /* Transición suave para efectos hover */
+}
+
+/* Efecto hover del botón de carrito */
+.btn-cart:hover {
+  background-color: #dad5d5; /* Fondo más claro al hacer hover */
+  color: #2575fc; /* Color azul para el texto al hacer hover */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); /* Sombra más intensa */
+  transform: translateY(-3px); /* Elevación suave */
+}
+
+/* Efecto cuando el botón está activo (clicado) */
+.btn-cart:active {
+  transform: translateY(0); /* El botón regresa a su posición normal */
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15); /* Sombra más suave al hacer clic */
+}
+
+/* Estilo para el ícono dentro del botón */
+.btn-cart i {
+  margin-right: 8px; /* Espacio entre el ícono y el texto */
+  font-size: 18px; /* Tamaño adecuado para el ícono */
+}
+
+/*BOTÓN INICIO DE SESIÓN*/
+.btn-login{
+  background: none; /* Color de fondo sutil pero atractivo */
+  color: white; /* Texto blanco para un buen contraste */
+  padding: 8px 25px; /* Espaciado más cómodo para el botón */
+  border: none;
+  border-radius: 30px; /* Bordes completamente redondeados */
+  cursor: pointer; /* El puntero de la mano al pasar por encima */
+  font-size: 14px; /* Tamaño de fuente ligeramente mayor */
+  font-weight: 600; /* Negrita para hacerlo más notorio */
+  text-transform: uppercase; /* Texto en mayúsculas */
+  letter-spacing: 1px; /* Espaciado entre letras para un efecto limpio */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Sombra sutil para darle profundidad */
+  transition: all 0.3s ease; /* Transición suave para cualquier cambio */
+}
+
+/* Efecto hover */
+.btn-login:hover {
+  background: #dad5d5; /* Fondo más claro para el hover */
+  color: #2575fc; /* Cambia el color del texto a un tono vibrante */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada al pasar el mouse */
+  transform: translateY(-3px); /* Levanta ligeramente el botón */
+  transition: all 0.3s ease; /* Mantiene la suavidad en la transición */
+}
+
+/* Efecto al hacer clic */
+.btn-login:active {
+  transform: translateY(0); /* Resetea el movimiento cuando se hace clic */
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15); /* Sombra más suave al hacer clic */
+}
+/*BOTÓN CERRAR SESIÓN*/
+/* Estilo del botón "Cerrar sesión" */
+.btn-logout {
+  background: none;
+  color: white;  /* Texto blanco para buen contraste */
+  font-size: 14px;  /* Tamaño de letra legible */
+  font-weight: 600;  /* Negrita para mayor énfasis */
+  padding: 8px 25px;  /* Espaciado interno */
+  border-radius: 30px;  /* Bordes redondeados */
+  border: none;  /* Borde sutil en un tono rojo oscuro */
+  cursor: pointer;  /* Cambiar el cursor para indicar que es clickeable */
+  transition: all 0.3s ease;  /* Transición suave para efectos hover */
+  text-transform: uppercase;  /* Todo en mayúsculas para mayor énfasis */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);  /* Sombra sutil para dar profundidad */
+}
+
+/* Estilo cuando el usuario pasa el ratón sobre el botón (hover) */
+.btn-logout:hover {
+  background: #dad5d5;  /* Rojo más oscuro para indicar interacción */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  transform: translateY(-3px);  /* Efecto de ampliación al pasar el ratón */
+  transition: all 0.3 ease;
+}
+
+/* Estilo cuando el botón está deshabilitado (si es necesario) */
+.btn-logout:disabled {
+  background-color: #e57373;  /* Un rojo más suave */
+  color: #9e9e9e;  /* Texto gris para indicar deshabilitado */
+  border-color: #d32f2f;  /* Borde rojo pálido */
+  cursor: not-allowed;  /* Cambiar el cursor a no permitido */
+}
+
+
+/* Modal (ventana emergente) */
+
+/* Fondo oscuro del modal */
+.modal {
+  display: none; /* Inicialmente oculto */
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro semitransparente */
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.5s ease-in-out; /* Animación para mostrar el modal */
+  
+}
+
+/* Animación de desvanecimiento */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Contenido del modal */
+.modal-content {
+  background: #080808b2;
+  padding: 40px;
+  border-radius: 15px;
+  margin: 15% auto;
+  width: 100%;
+  max-width: 450px;
+  text-align: center;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  transform: scale(0.95);
+  animation: scaleIn 0.3s ease-out; /* Animación para escalar el modal */
+  
+}
+
+/* Animación de escala */
+@keyframes scaleIn {
+  from {
+    transform: scale(0.95);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+.modal-content h2 {
+  color: #ffffff;
+  font-size: 28px;
+  margin-bottom: 20px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.modal-content input {
+  width: 100%;
+  padding: 12px 15px;
+  margin: 15px 0;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+/* Efecto al enfocar los inputs */
+.modal-content input:focus {
+  border-color: #1ecae9;
+  box-shadow: 0 0 10px rgba(41, 133, 128, 0.6); /* Resplandor cuando está enfocado */
+}
+
+/* Estilo para el botón de submit */
+.modal-content input[type="submit"] {
+  background-color: #2391d1; /* Color de fondo del botón */
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 12px 0;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Efecto de hover en el botón */
+.modal-content input[type="submit"]:hover {
+  background-color: #0fdfee;
+  transform: translateY(-3px); /* Efecto de elevación */
+}
+
+/* Estilo para el botón de cerrar */
+.close {
+  color: #fffcfc;
+  font-size: 32px;
+  font-weight: bold;
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+/* Cambio de color cuando se pasa el ratón */
+.close:hover,
+.close:focus {
+  color: #333;
+  text-decoration: none;
+}
+
+
+
+
+
+/*carrito de compras en prendas*/
+
+.product button {
+  background-color: #1b491c;     /* Color de fondo (verde oscuro) */
+  color: white;                  /* Color del texto */
+  border: 2px solid #1b491c;     /* Borde del botón (mismo color que el fondo) */
+  padding: 6px 12px;            /* Espaciado interno (más espacio en los lados) */
+  border-radius: 15px;           /* Bordes redondeados más pronunciados */
+  cursor: pointer;               /* Aparece la mano al pasar el ratón */
+  font-size: 14px;                /* Tamaño del texto */
+  font-weight: bold;              /* Hacer el texto en negrita */
+  text-transform: uppercase;      /* Texto en mayúsculas */
+  transition: all 0.3s ease;      /* Transición suave para los efectos */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra sutil para dar profundidad */
+}
+
+.product button:hover {
+  background-color: #145215;     /* Cambio de color al pasar el ratón (verde más oscuro) */
+  border-color: #145215;         /* Borde del mismo color */
+  transform: translateY(-4px);   /* Efecto de desplazamiento hacia arriba (eleva el botón) */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2); /* Aumento de la sombra al pasar el ratón */
+}
+.product button:active {
+  transform: translateY(2px);    /* Efecto de "presionar" cuando el botón es clickeado */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15); /* Sombra más sutil al hacer clic */
+}
+
+button {
+  cursor: pointer;
+}
+
+#total {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#clear-cart, #checkout {
+  background-color: #ff5e62;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  width: 100%;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+#clear-cart:hover, #checkout:hover {
+  background-color: #ff4a3f;
+}
+
+/*desplazamiento*/
+
+html{
+  scroll-behavior: smooth;
+}
+
+/*icon carrito*/
+/* Estilo para el botón del carrito sin borde */
+.btn {
+  border: none;               /* Elimina el borde */
+  background: transparent;    /* Fondo transparente */
+  padding: 8px 15px;          /* Un poco de espaciado alrededor del ícono */
+  display: inline-flex;       /* Alinea el ícono y el texto (si es que decides agregarlo) */
+  align-items: center;        /* Alinea el ícono verticalmente */
+  justify-content: center;    /* Alinea el ícono horizontalmente */
+
+}
+
+/* Estilo para el ícono */
+.btn i {
+  font-size: 20px;           /* Tamaño del ícono */
+  color: #fff;                /* Color blanco para el ícono */
+  transition: color 0.3s ease; /* Transición suave en el cambio de color */
+}
+
+/* Efecto cuando se pasa el mouse (hover) */
+.btn:hover i {
+  
+  color: #000000;             /* Cambia el color del ícono a negro cuando el mouse pasa por encima */
+}
+
+/* Opcional: Elimina el color del texto si se pasa el mouse */
+.btn:focus, .btn:hover {
+  text-decoration: none;      /* Evita que se subraye el enlace al pasar el mouse */
+}
+
+
+/*footer*/
+footer {
+  background-color: #333; /* Fondo oscuro */
+  color: white; /* Texto blanco */
+  padding: 30px 20px; /* Espaciado interno, adaptado para dispositivos pequeños */
+  text-align: center; /* Centrado de texto */
+  font-size: 14px; /* Tamaño de texto base */
+  font-family: 'Arial', sans-serif;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil en la parte superior */
+  width: 100%; /* Asegura que el footer ocupe todo el ancho */
+  position: relative; /* Para evitar que se solapen otros elementos */
+}
+
+/* Estilo para los párrafos */
+footer p {
+  margin: 10px 0;
+}
+
+/* Estilo para los enlaces en el footer */
+footer a {
+  color: #fffdfd; /* Color de enlace */
+  text-decoration: none; /* Quitar subrayado */
+  transition: color 0.3s ease; /* Transición suave para el color */
+}
+
+footer a:hover {
+  color: #2575fc; /* Cambio de color al hacer hover */
+}
+
+/* Estilo para los íconos de redes sociales */
+footer .fa {
+  color: #ff5e62; /* Color de los íconos */
+  font-size: 18px; /* Tamaño de los íconos */
+  margin: 0 12px; /* Espaciado entre íconos */
+  transition: transform 0.3s ease, color 0.3s ease; /* Animación para el hover */
+}
+
+footer .fa:hover {
+  color: #2575fc; /* Cambia el color al pasar el mouse */
+  transform: scale(1.2); /* Agranda el icono */
+}
+
+/* Estilo para dispositivos pequeños: Tablets, móviles */
+@media (max-width: 768px) {
+  footer {
+    padding: 20px 10px; /* Reduce el padding para pantallas más pequeñas */
+    font-size: 12px; /* Reduce el tamaño de la fuente */
+  }
+
+  footer .fa {
+    font-size: 22px; /* Aumenta el tamaño de los íconos para móviles */
+  }
+
+  footer p {
+    font-size: 13px; /* Ajuste de tamaño del texto para móviles */
+  }
+}
+
+/* Estilo para pantallas extra pequeñas (por ejemplo, teléfonos móviles en modo vertical) */
+@media (max-width: 480px) {
+  footer {
+    padding: 15px 5px; /* Ajuste del padding */
+  }
+
+  footer .fa {
+    font-size: 24px; /* Aumenta más el tamaño de los íconos */
+    margin: 0 8px; /* Menos margen entre íconos */
+  }
+
+  footer p {
+    font-size: 11px; /* Reduce más el tamaño del texto en pantallas muy pequeñas */
+  }
+}

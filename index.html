@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="Tienda de ropa deportiva - Encuentra lo último en camisetas, zapatillas y accesorios de marcas como Nike, Adidas y Puma">
+    <title>Palacio del deporte</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="funciones.js"></script>
+    <link rel="stylesheet" href="index.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link rel="icon" href="imagenes/Designer.jpeg" type="image/jpeg">
+    
+  </head>
+  <body>
+    <!--navbarrrr-->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html"> <img src="./imagenes/Designer.jpeg" alt="" width="40px" height="40px"></a>
+        <span class="website-name ms-2">PALACIODELDEPORTE</span>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#seccion-hombre">Hombre</a>
+            </li>
+            <li class="nav-item">
+              
+              <a class="nav-link" href="#seccion-mujer">Mujer</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#seccion-accesorios">Accesorios</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Marcas
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="https://www.nike.cl" target="_blank">Nike</a></li>
+                <li><a class="dropdown-item" href="https://www.adidas.cl" target="_blank">Adidas</a></li>
+                <li><a class="dropdown-item" href="https://cl.puma.com" target="_blank">Puma</a></li>
+                </ul>
+            </li>
+          </ul>
+          <!--carrito de compras-->
+          <a href="cart.html" class="btn btn-outline-light me-3">
+            <i class="fa-duotone fa-solid fa-cart-shopping"></i>  <!-- Ícono de carrito de compras -->
+          </a>
+          <!--logiiin-->
+      <!-- Botón para abrir el modal -->
+      <button class="btn-login" id="loginButton" onclick="openModal()"><i class="fa-solid fa-user"></i></button>
+      <button class="btn-logout" id="logoutButton" onclick="logout()" style="display: none;">
+        <i class="fa-solid fa-sign-out-alt"></i> Cerrar sesión
+      </button>
+
+<!-- Modal -->
+<div id="loginModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <h2>Iniciar Sesión</h2>
+        <form id="loginForm" onsubmit="login(event)">
+            <input type="text" placeholder="Usuario" id="username" required><br>
+            <input type="password" placeholder="Contraseña" id="password" required><br>
+            <input type="submit" value="Entrar">
+        </form>
+    </div>
+</div>
+    </div>
+      </div>
+    </nav>
+<!--carrusel-mujer-->
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="imagenes/carruselPUMA.png" alt="Imagen de campaña Just Do It" class="d-block w-100">
+    </div>
+    <div class="carousel-item">
+      <img src="imagenes/zapato.png" alt="Imagen promocional" class="d-block w-100">
+    </div>
+    <div class="carousel-item">
+      <img src="imagenes/colocolocarrusel.png" alt="Camiseta Chile" class="d-block w-100">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+<!--secciones-->
+<div class="container text-center my-5" id="seccion-mujer">
+  <div class="row justify-content-center">
+    <div class="col-md-5 col-12 mb-4" >
+      <a href="mujer.html" target="_blank">
+        <img src="imagenes/Picsart_24-11-07_11-51-15-797.jpg"   alt="Sección mujer" class="team-logo shadow-lg rounded transition-transform hover:scale-105"> 
+      </a>
+    </div>
+    <div class="col-md-5 col-12 mb-4" id="seccion-hombre">
+      <a href="hombre.html" target="_blank">
+        <img src="imagenes/Picsart_24-11-07_12-15-00-391 (1).jpg" alt="FC Barcelona" class="team-logo shadow-lg rounded transition-transform hover:scale-105">
+      </a>
+    </div>
+  </div>
+</div>
+
+
+<!--SECCIÓN DE PRODUCCTOS 1: CAMISETAS-->
+<div class="product-container">
+  <div class="product">
+      <a href="https://www.adidas.cl/tercera-camiseta-colo-colo-2024-2025/JK7748.html?cm_mmc=AdieSEM_Google_PLA-_-Always_On-_-Shopping-_-JK7748-0005-_-dv%3AeCom-_-cn%3AAlways_On-_-F%C3%BAtbol&cm_mmc=AdieSEM_Google_PLA-_-adidas-LAM-CL-PMax-Football_EverythingElse-M-_--_--_-dv%3AeCom&cm_mmc1=CL&cm_mmc2=PLA-Multiple-F%C3%BAtbol-Other-None-CL-LATAM-eCom-Paid_Search&cm_mmca1=MX&cm_mmca2=&gad_source=1&gclid=Cj0KCQiA88a5BhDPARIsAFj595j6WJ7q-BXD1TT2OcJlQQxA2B2Ei7tvOPuk6zlYF8jXnHeYF2zOk_EaAvAsEALw_wcB&gclsrc=aw.ds" target="_blank">
+        <img src="imagenes/poleracc2024.jpg" alt="Camiseta CC">
+      </a>
+      <h3>Camiseta Colo-Colo 2024</h3>
+      <p>Tercera camiseta Colo-Colo 2024</p>
+      <p class="price">$54.990</p>
+      <button onclick="addToCart('Tercera camiseta Colo-Colo', 54.990)">Agregar al Carrito</button>
+  </div>
+  <div class="product">
+      <a href="https://www.adidas.cl/camiseta-local-chile-2024/IP8455.html" target="_blank">
+        <img src="./imagenes/camisetachilelocal.png" alt="Camiseta Ch">
+      </a>
+      <h3>Camiseta Chile local 2024</h3>
+      <p>Camiseta local Selección Chilena</p>
+      <p class="price">$59.990</p>
+      <button onclick="addToCart('Camiseta local Selección Chilena', 59.990)">Agregar al Carrito</button>
+  </div>
+  <div class="product">
+    <a href="https://www.nike.cl/fn8795-411-paris-saint-germain-2024-2025-stadium-home/p?idsku=120168&gad_source=1&gclid=Cj0KCQiA88a5BhDPARIsAFj595gg0k0k1EepgxdM3SNucIcMfFzO4pFBgnE1Us_9u8WvXrcj0d7OaqUaAuhYEALw_wcB" target="_blank">
+    <img src="imagenes/camisetaPSG.png" alt="Camiseta PSG">
+    </a>
+    <h3>Camiseta PSG local 2024/2025</h3>
+    <p>Camiseta local PSG</p>
+    <p class="price">$79.990</p>
+    <button onclick="addToCart('Camiseta local PSG', 79.990)">Agregar al Carrito</button>
+    
+</div>
+<div class="product">
+  <a href="https://cl.puma.com/camiseta-local-rb-leipzig-24-25-para-hombre-776400-01.html" target="_blank">
+  <img src="./imagenes/leipzig.png" alt="Camiseta Leipzig">
+  </a>
+  <h3>Camiseta RB Leipzig Local 2024/25</h3>
+  <p>Camiseta local RB Leipzig</p>
+  <p class="price">$65.990</p>
+  <button onclick="addToCart('Camiseta local RB Leipzig', 65.990)">Agregar al Carrito</button>
+</div>
+
+<!--sección 2-->
+<div class="container text-center my-5">
+  <div class="row justify-content-center">
+    <div class="col-md-5 col-12 mb-4">
+      <a href="botines.html" target="_blank">
+        <img src="imagenes/Picsart_24-11-07_12-42-49-038.jpg" alt="Sección botines" class="team-logo shadow-lg rounded transition-transform hover:scale-105">
+      </a>
+    </div>
+    <div class="col-md-5 col-12 mb-4" id="seccion-accesorios">
+      <a href="accesorios.html" target="_blank">
+      <img src="imagenes/Picsart_24-11-07_12-28-08-063.jpg" alt="Sección accesorios" class="team-logo shadow-lg rounded transition-transform hover:scale-105">
+      </a>
+    </div>
+  </div>
+</div>
+<!--SECCIÓN DE PRODUCCTOS 2: -->
+<div class="product-container">
+  <div class="product">
+      <a href="https://www.adidas.cl/pelota-fussballliebe-league/IN9367.html" target="_blank">
+        <img src="imagenes/balonADIDAS.png" alt="Camiseta CC">
+      </a>
+      <h3>Pelota Fussballliebe League</h3>
+      
+      <p class="price">$32.990</p>
+      <button onclick="addToCart('Pelota Fussballliebe League', 32.990)">Agregar al Carrito</button>
+  </div>
+  <div class="product">
+      <a href="https://www.nike.cl/sx4120-001-nike-academy/p?idsku=15599&gad_source=1&gclid=Cj0KCQiAlsy5BhDeARIsABRc6ZtqcoHeoi7OAnX4-wo5x57ekR1wDJ9QA-ZHMlbHpdu36nd7KNtUVF8aAutyEALw_wcB" target="_blank">
+        <img src="imagenes/calcetasNIKE.png" alt="Camiseta Ch">
+      </a>
+      <h3>Calcetines para fútbol | NIKE Academy</h3>
+      
+      <p class="price">$14.990</p>
+      <button onclick="addToCart('Calcetines para fútbol', 14.990)">Agregar al Carrito</button>
+  </div>
+  <div class="product">
+    <a href="https://cl.puma.com/guantes-de-arqueto-future-ultimate-nc-041923-05.html?size=10&r=1&dummy_recrawl&utm_source=GGL&utm_medium=PMAX&gad_source=1&gclid=Cj0KCQiAlsy5BhDeARIsABRc6ZulpK04FBVCSPAGE0GRcDCxRdAzBVZVjBWB5-JYhYNQjX_PfkTEME0aApyeEALw_wcB" target="_blank">
+    <img src="imagenes/guantesPUMA.png" alt="Camiseta PSG">
+    </a>
+    <h3>Guantes de arquero FUTURE Ultimate NC</h3>
+    <p class="price">$129.990</p>
+    <button onclick="addToCart('Camiseta local PSG', 79.990)">Agregar al Carrito</button>
+</div>
+<div class="product">
+  <a href="https://www.adidas.cl/canilleras-predator-league/IA0855.html" target="_blank">
+  <img src="imagenes/canillerasADIDAS.png" alt="Camiseta Leipzig 2024/25">
+  </a>
+  <h3>Canilleras Predator League</h3>
+  <p class="price">$42.990</p>
+  <button onclick="addToCart('Canilleras Predator League', 42.990)">Agregar al Carrito</button>
+</div>
+
+
+<footer class="text-center mt-5 py-3" style="background-color: 43a40;">
+  <p>&copy; 2024 Palacio del Deporte | <a href="quiénessomos.html">¿Quiénes somos?</a> | <a>Términos y condiciones</a> | <a href="politica.html">Política de privacidad</a> 
+  </p>
+  <p>Síguenos en nuestras redes sociales: 
+    <a href="https://www.instagram.com/kvthiwi/?hl=es" <i class="fa-brands fa-instagram"></i></a> 
+    <a href="https://www.facebook.com/K4therinesp?locale=es_LA" <i class="fa-brands fa-facebook"></i></a> 
+  </p>
+  <p>
+    Contáctanos: 
+  <a>
+    <a href="#" <i class="fa-brands fa-whatsapp"> +56923233445</i></a> | <i class="fa-solid fa-phone"> 9 23233445</i>
+  </a>
+  </p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="funciones.js" async></script>
+  </body>
+</html>
